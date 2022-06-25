@@ -1,0 +1,10 @@
+{
+  "title": "Hello Vite + React!",
+  "countIs": "count is: ",
+  "edit": "Edit ",
+  "save": " and save to test HMR updates.",
+  "links": {
+    "learnReact": "Learn React",
+    "viteDocs": "Vite Docs"
+  }
+}
