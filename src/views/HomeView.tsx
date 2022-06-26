@@ -1,21 +1,15 @@
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import logo from "../assets/logo.svg";
-import HomeLink from "../components/HomeLink";
+import LinksButton from "../features/links/LinksButton";
+import LinksList from "../features/links/LinksList";
 
 const HomeView = () => {
   const { t } = useTranslation();
 
-  const [count, setCount] = useState(0);
-
-  const handleCountClick = () => setCount((count) => count + 1);
-
   const edit = t`edit`;
   const save = t`save`;
   const title = t`title`;
-  const countIs = t`countIs`;
-  const viteDocs = t`links.viteDocs`;
-  const learnReact = t`links.learnReact`;
+  const addFirstLink = t`addFirstLink`;
 
   return (
     <div className="text-center">
@@ -27,27 +21,12 @@ const HomeView = () => {
         />
         <p>{title}</p>
         <p>
-          <button
-            className="text-[calc(10px_+_2vmin)]"
-            type="button"
-            onClick={handleCountClick}
-          >
-            {countIs}
-            {count}
-          </button>
-        </p>
-        <p>
           {edit}
           <code>App.tsx</code>
           {save}
         </p>
-        <p>
-          <HomeLink location="https://reactjs.org">{learnReact}</HomeLink>
-          {" | "}
-          <HomeLink location="https://vitejs.dev/guide/features.html">
-            {viteDocs}
-          </HomeLink>
-        </p>
+        <LinksList />
+        <LinksButton label={addFirstLink} />
       </header>
     </div>
   );

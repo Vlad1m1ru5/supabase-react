@@ -8,8 +8,8 @@ i18next
   .use(I18NextHttpBackend)
   .use(initReactI18next)
   .init({
-    lng: "en-US",
-    fallbackLng: "en-US",
+    lng: "en",
+    fallbackLng: "en",
     ns: "translation",
     fallbackNS: "translation",
     backend: {
