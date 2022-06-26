@@ -1,15 +1,15 @@
 import type { ReactNode } from "react";
 
 export interface HomeLinkProps {
-  link: string;
+  location: string;
   children?: ReactNode;
 }
 
-const HomeLink = ({ link, children }: HomeLinkProps) => {
+const HomeLink = ({ location, children }: HomeLinkProps) => {
   return (
     <a
       className="text-[#61dafb]"
-      href={link}
+      href={location}
       target="_blank"
       rel="noopener noreferrer"
     >

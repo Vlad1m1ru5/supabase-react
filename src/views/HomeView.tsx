@@ -1,12 +1,9 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import logo from "../assets/logo.svg";
 import HomeLink from "../components/HomeLink";
 
-export interface HomeViewProps {
-  logo: string;
-}
-
-const HomeView = ({ logo }: HomeViewProps) => {
+const HomeView = () => {
   const { t } = useTranslation();
 
   const [count, setCount] = useState(0);
@@ -45,9 +42,9 @@ const HomeView = ({ logo }: HomeViewProps) => {
           {save}
         </p>
         <p>
-          <HomeLink link="https://reactjs.org">{learnReact}</HomeLink>
+          <HomeLink location="https://reactjs.org">{learnReact}</HomeLink>
           {" | "}
-          <HomeLink link="https://vitejs.dev/guide/features.html">
+          <HomeLink location="https://vitejs.dev/guide/features.html">
             {viteDocs}
           </HomeLink>
         </p>

@@ -1,12 +1,11 @@
 import { Suspense } from "react";
 import "./app/i18n";
-import logo from "./assets/logo.svg";
-import HomeView from "./views/HomeView";
+import Router from "./app/Router";
 
 const App = () => {
   return (
     <Suspense fallback={"Loading..."}>
-      <HomeView logo={logo} />
+      <Router />
     </Suspense>
   );
 };
