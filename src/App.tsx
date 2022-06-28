@@ -1,15 +1,19 @@
 import { Suspense } from "react";
 import { Provider } from "react-redux";
-import { LOADING_STUB } from "./app/constants";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./app/i18n";
-import Router from "./app/Router";
 import store from "./app/store";
+import HomeView from "./views/HomeView";
 
 const App = () => {
   return (
     <Provider store={store}>
-      <Suspense fallback={LOADING_STUB}>
-        <Router />
+      <Suspense fallback="Loading...">
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<HomeView />} />
+          </Routes>
+        </BrowserRouter>
       </Suspense>
     </Provider>
   );

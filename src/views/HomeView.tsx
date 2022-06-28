@@ -1,13 +1,11 @@
 import { useTranslation } from "react-i18next";
 import logo from "../assets/logo.svg";
-import LinksButton from "../features/links/LinksButton";
-import LinksList from "../features/links/LinksList";
+import BookmarkButton from "../features/bookmarks/BookmarksButton";
+import BookmarkList from "../features/bookmarks/BookmarksList";
 
 const HomeView = () => {
   const { t } = useTranslation();
 
-  const edit = t`edit`;
-  const save = t`save`;
   const title = t`title`;
   const addFirstLink = t`addFirstLink`;
 
@@ -21,12 +19,9 @@ const HomeView = () => {
         />
         <p>{title}</p>
         <p>
-          {edit}
-          <code>App.tsx</code>
-          {save}
+          <BookmarkList />
+          <BookmarkButton noBookmarksLabel={addFirstLink} />
         </p>
-        <LinksList />
-        <LinksButton label={addFirstLink} />
       </header>
     </div>
   );

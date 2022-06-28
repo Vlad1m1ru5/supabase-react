@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import linksSlice from "../features/links/linksSlice";
+import bookmarksSlice from "../features/bookmarks/bookmarksSlice";
 
 const store = configureStore({
   reducer: {
-    [linksSlice.name]: linksSlice.reducer,
+    [bookmarksSlice.name]: bookmarksSlice.reducer,
   },
 });
 
